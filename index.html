@@ -1,0 +1,77 @@
+<!--
+Author      : 青叶
+Email       : chenyanphp@qq.com
+Link        : http://www.phpol.cn
+Version     : 1.0
+File        : 主要HTML文件
+Description : 一个HTML5的画图板
+-->
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画图板</title>
+    <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/jquery.1.12.3.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/draw.js"></script>
+    <script src="static/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <aside>
+            <h1>画图板</h1>
+            <fieldset class="shape">
+                <legend>工具</legend>
+                <ul id="paint-brush">
+                    <li class="active" data-type="pen"><i class="fa fa-pencil"></i>铅笔</li>
+                    <li data-type="eraser"><i class="fa fa-eraser"></i>橡皮擦</li>
+                </ul>
+            </fieldset>
+            <fieldset class="shape">
+                <legend>形状</legend>
+                <ul id="shape">
+                    <li data-type="line"><i class="fa fa-minus"></i>直线</li>
+                    <li data-type="rect"><i class="fa fa-square-o"></i>矩形</li>
+                    <li data-type="circle"><i class="fa fa-circle-o"></i>圆形</li>
+                </ul>
+            </fieldset>
+            <fieldset class="shape">
+                <legend>效果</legend>
+                <ul>
+                    <li><div class="select-color"><span>颜色</span><input id="line-color" type="color" name="color" class="color" value="#000000"></div></li>
+                    <li>
+                        <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            粗细
+                            <span class="caret"></span>
+                        </button>
+                        <ul id="line-width" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li data-value="1"><a href="javascript:;"></a></li>
+                            <li data-value="4"><a href="javascript:;"></a></li>
+                            <li data-value="6"><a href="javascript:;"></a></li>
+                        </ul>
+                    </div>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset class="shape">
+                <legend>操作</legend>
+                <ul>
+                    <li id="back-op"><i class="fa fa-reply"></i>撤销</li>
+                    <li id="clear-canvas"><i class="fa fa-remove"></i>清空</li>
+                </ul>
+            </fieldset>
+            <div id="copyright">Copyright:2018 青叶 <a target="_blank" href="http://www.phpol.cn">http://www.phpol.cn</a>&nbsp;<a style="position:relative;top:-2px;" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=578672331&amp;site=qq&amp;menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:578672331:51" alt="点击这里给我发消息" title="点击这里给我发消息"></a></div>
+        </aside>
+        <main>
+            <canvas></canvas>
+        </main>
+    </div>
+</body>
+</html>
